@@ -1,0 +1,29 @@
+.navbar
+    .navbar-inner
+        .left.sliding Login
+.pages.navbar-through
+    .page(data-page="login")
+        .page-content.login-screen-content
+            form.bottom
+                .list-block
+                    ul
+                        li.item-content
+                            .item-inner
+                                .item-input
+                                    input(type="email", id="email", name="email", placeholder="Email")
+                        li.item-content
+                            .item-inner
+                                .item-input
+                                    input(type="password", id="password", name="password", placeholder="Password")
+
+                .hero-buttons.normal-buttons
+                    .list-block.inset
+                        ul
+                            li
+                                a(href="login.html").list-button.item-link#login
+                                    span PLAY!
+                    .list-block.inset
+                        ul
+                            li
+                                a(href="index.html").list-button.item-link.back
+                                    span Back

@@ -1,0 +1,707 @@
+doctype
+html
+  head
+    meta(charset="utf-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui")
+    meta(name='apple-mobile-web-app-capable', content='yes')
+    meta(name="apple-mobile-web-app-status-bar-style", content="black")
+    title My App
+    // Path to Framework7 Library CSS
+    link(rel="stylesheet", href="css/#{stylesheetFilename}.css")
+    link(rel="stylesheet", href="css/#{stylesheetColorsFilename}.css")
+    link(rel="stylesheet", href="css/framework7-icons.css")
+    // Path to your custom app styles
+    link(rel="stylesheet", href="css/my-app.css")
+  body
+    // Status bar overlay for fullscreen mode
+    .statusbar-overlay
+    // Panels overlay
+    .panel-overlay
+    // We need to set "toolbar-through" class on it to keep space for our tab bar
+    .popover.popover-menu
+      .popover-angle
+      .popover-inner
+        .list-block
+          ul
+            li
+              a(href="#").list-button.item-link Choose from Library
+            li
+              a(href="#").list-button.item-link Take Photo
+            li
+              a(href="#").list-button.item-link.color-red Remove Current Photo
+    .popover.popover-music
+    .views.tabs.toolbar-through
+      // Your first view, it is also a .tab and should have "active" class to make it visible by default
+      #view-1.view.view-main.tab.active
+        // We can make with view with navigation, let's add Top Navbar
+        .navbar
+          .navbar-inner
+            // Search Bar
+            //form.searchbar.searchbar-init(data-search-list=".search-here", data-search-in=".item-title")
+            // .searchbar-input
+            //   input(type='search', placeholder='Search')
+            //   a.searchbar-clear(href='#')
+            // a.searchbar-cancel(href='#') Cancel
+            // // Search Bar overlay
+            .subnavbar.sliding.no-p
+              .buttons-row
+                a(href="#fixtures").button.tab-link.active Fixtures
+                a(href="#matches").button.tab-link Matches
+                a(href="#match-history").button.tab-link History
+        .pages.navbar-through
+          .page(data-page='index1')
+
+            //.searchbar-overlay
+
+            // Scrollable page content
+            .page-content
+              //.with-subnavbar
+              .tabs-animated-wrap
+                .tabs
+                  .page-content.tab(id="fixtures").active.matches
+                    .content-block
+                      .text-center#fixturesLoader
+                        .preloader.preloader-blue
+
+                      //.content-block-title Media City Magic
+                      //.card.match-card
+                      //  .card-content.row.no-gutter
+                      //    .card-content-inner.col-70
+                      //      .row.no-gutter
+                      //        .col-35
+                      //          span K.O.:
+                      //        .col-65
+                      //          p 22/10/17 20:30
+                      //      .row.no-gutter
+                      //        .col-35
+                      //          span Pitch:
+                      //        .col-65
+                      //          p
+                      //            a(href="#") Media City, Dubai
+                      //      .row.no-gutter
+                      //        .col-35
+                      //          span Players:
+                      //        .col-65
+                      //          p 20/20
+                      //      .row.no-gutter
+                      //        .col-35
+                      //          span Club:
+                      //        .col-65
+                      //          p Dubai Colts
+                      //      .row.no-gutter
+                      //        .col-35
+                      //          span Cost:
+                      //        .col-65
+                      //          p 40aed
+                      //    .col-30.bg-red
+                      //      a(href="#").link.demo-confirm
+                      //        span Leave
+                    a(href="#").floating-button.color-blue
+                      i.icon.f7-icons add
+                  .page-content.tab(id="matches")
+                    .content-block
+                      .content-block-title Dubai Cobras
+                      .card.match-card
+                        .card-content.row.no-gutter
+                          .card-content-inner.col-70
+                            .row.no-gutter
+                              .col-35
+                                span K.O.:
+                              .col-65
+                                p 22/10/17 20:30
+                            .row.no-gutter
+                              .col-35
+                                span Pitch:
+                              .col-65
+                                p
+                                  a(href="#") Media City, Dubai
+                            .row.no-gutter
+                              .col-35
+                                span Players:
+                              .col-65
+                                p 20/20
+                            .row.no-gutter
+                              .col-35
+                                span Club:
+                              .col-65
+                                p Dubai Colts
+                            .row.no-gutter
+                              .col-35
+                                span Cost:
+                              .col-65
+                                p 40aed
+                          .col-30.bg-green
+                            a(href="#").link
+                              span Join
+                      .content-block-title Media City Magic
+                      .card.match-card
+                        .card-content.row.no-gutter
+                          .card-content-inner.col-70
+                            .row.no-gutter
+                              .col-35
+                                span K.O.:
+                              .col-65
+                                p 22/10/17 20:30
+                            .row.no-gutter
+                              .col-35
+                                span Pitch:
+                              .col-65
+                                p
+                                  a(href="#") Media City, Dubai
+                            .row.no-gutter
+                              .col-35
+                                span Players:
+                              .col-65
+                                p 20/20
+                            .row.no-gutter
+                              .col-35
+                                span Club:
+                              .col-65
+                                p Dubai Colts
+                            .row.no-gutter
+                              .col-35
+                                span Cost:
+                              .col-65
+                                p 40aed
+                          .col-30.bg-green
+                            a(href="#").link.demo-confirm
+                              span Join
+                  .page-content.tab(id="match-history")
+                    .content-block
+                      .content-block
+                      .content-block-title Dubai Cobras
+                      .card.match-card
+                        .card-content.row.no-gutter
+                          .card-content-inner.col-70
+                            .row.no-gutter
+                              .col-35
+                                span K.O.:
+                              .col-65
+                                p 22/10/17 20:30
+                            .row.no-gutter
+                              .col-35
+                                span Pitch:
+                              .col-65
+                                p
+                                  a(href="#") Media City, Dubai
+                            .row.no-gutter
+                              .col-35
+                                span Players:
+                              .col-65
+                                p 20/20
+                            .row.no-gutter
+                              .col-35
+                                span Club:
+                              .col-65
+                                p Dubai Colts
+                            .row.no-gutter
+                              .col-35
+                                span Cost:
+                              .col-65
+                                p 40aed
+                            .row
+                              a.button View Match Stats
+                          .col-30.bg-green
+                            .link
+                              .result
+                                h2 4:0
+                                span Win
+
+                      .card.match-card
+                        .card-content.row.no-gutter
+                          .card-content-inner.col-70
+                            .row.no-gutter
+                              .col-35
+                                span K.O.:
+                              .col-65
+                                p 22/10/17 20:30
+                            .row.no-gutter
+                              .col-35
+                                span Pitch:
+                              .col-65
+                                p
+                                  a(href="#") Media City, Dubai
+                            .row.no-gutter
+                              .col-35
+                                span Players:
+                              .col-65
+                                p 20/20
+                            .row.no-gutter
+                              .col-35
+                                span Club:
+                              .col-65
+                                p Dubai Colts
+                            .row.no-gutter
+                              .col-35
+                                span Cost:
+                              .col-65
+                                p 40aed
+                            .row
+                              a.button View Match Stats
+                          .col-30.bg-yellow
+                            .link
+                              .result
+                                h2 6:6
+                                span Draw
+
+
+
+                      .card.match-card
+                        .card-content.row.no-gutter
+                          .card-content-inner.col-70
+                            .row.no-gutter
+                              .col-35
+                                span K.O.:
+                              .col-65
+                                p 22/10/17 20:30
+                            .row.no-gutter
+                              .col-35
+                                span Pitch:
+                              .col-65
+                                p
+                                  a(href="#") Media City, Dubai
+                            .row.no-gutter
+                              .col-35
+                                span Players:
+                              .col-65
+                                p 20/20
+                            .row.no-gutter
+                              .col-35
+                                span Club:
+                              .col-65
+                                p Dubai Colts
+                            .row.no-gutter
+                              .col-35
+                                span Cost:
+                              .col-65
+                                p 40aed
+                            .row
+                              a.button View Match Stats
+                          .col-30.bg-red
+                            .link
+                              .result
+                                h2 0:2
+                                span Loss
+
+      // Second view (for second wrap)
+      #view-2.view.tab
+        // We can make with view with navigation, let's add Top Navbar
+        .navbar
+          .navbar-inner
+            // Search Bar
+            //form.searchbar
+            //  .searchbar-input
+            //    input(type='search', placeholder='Search')
+            //    a.searchbar-clear(href='#')
+            //  a.searchbar-cancel(href='#') Cancel
+            //  // Search Bar overlay
+            .subnavbar.sliding
+              .buttons-row
+                a(href="#myclubs").button.tab-link.active My Clubs
+                a(href="#findAClub").button.tab-link Find a Club
+                a(href="#club-management").button.tab-link Club Mgmt
+        .pages.navbar-through
+          .page(data-page='index-2')
+
+
+            // Scrollable page content
+            .page-content
+              //.with-subnavbar
+              .tabs-animated-wrap
+                .tabs
+                  .page-content.tab(id="myclubs").active
+                    .small-buttons
+                        .buttons-row
+                          a(href="#").button.active.detail-list.detail
+                            i.f7-icons data
+                          a(href="#").button.detail-list.list
+                            i.f7-icons list
+                    .content-block
+                      .content-block-title My Club
+                      .card.club-card
+                        .card-content
+                          img(src="https://www.kingfootballtips.com/wp-content/uploads/2016/03/brazilian-betting-tips-1000x700.png", width="100%")
+                          .card-content-inner
+                            h2 Samba Lads
+                            p 19 Members
+                            p Media City, Dubai
+                        .card-footer
+                          a(href="#").link Rules
+                          a(href="#").link Members
+                          a(href="#").link Edit
+                      .content-block-title Clubs I am a member of
+                      .card.club-card
+                        .card-content
+                          img(src="http://ladycoyotesoccer.com/images/logo/wfhslcs_logo-icon.png", width="100%")
+                          .card-content-inner
+                            h2 Dubai Wolves
+                            p 6 Members
+                            p Sports City, Dubai
+                          .card-footer
+                            a(href="#").link Rules
+                            a(href="#").link Members
+                            a(href="#").link Leave
+                      .card.club-card
+                        .card-content
+                          img(src="http://fanaticsinc.com/wp-content/uploads/Real-Madrid-C.F.-e1460472168914.jpg", width="100%")
+                          .card-content-inner
+                            h2 Dubai Galacticos
+                            p 336 Members
+                            p Sports City, Dubai
+                          .card-footer
+                            a(href="#").link Rules
+                            a(href="#").link Members
+                            a(href="#").link Leave
+                  .page-content.tab(id="findAClub")
+                    .small-buttons
+                      .buttons-row
+                        a(href="#").button.active.detail-list.detail
+                          i.f7-icons data
+                        a(href="#").button.detail-list.list
+                          i.f7-icons list
+                    .content-block
+                      .content-block-title Clubs Near Me
+                      .card.club-card
+                        .card-content
+                          img(src="https://upload.wikimedia.org/wikipedia/en/8/87/FAI.png", width="100%")
+                          .card-content-inner
+                            h2 Dubai Irish
+                            p 16 Members
+                            p Downtown, Dubai
+                          .card-footer
+                            a(href="#").link Rules
+                            a(href="#").link Members
+                            a(href="#").link Join
+                      .card.club-card
+                        .card-content
+                          img(src="https://upload.wikimedia.org/wikipedia/en/thumb/f/fb/Shamrock_Rovers_FC_logo.svg/1166px-Shamrock_Rovers_FC_logo.svg.png", width="100%")
+                          .card-content-inner
+                            h2 Al Barsha Rovers
+                            p 31 Members
+                            p Sports City, Dubai
+                          .card-footer
+                            a(href="#").link Rules
+                            a(href="#").link Members
+                            a(href="#").link Join
+                      .card.club-card
+                        .card-content
+                          img(src="http://inicewallpapers.com/wp-content/uploads/2016/06/arsenal-soccer-logo.jpg", width="100%")
+                          .card-content-inner
+                            h2 Mirdif Gooners
+                            p 310 Members
+                            p Mirdif, Dubai
+                          .card-footer
+                            a(href="#").link Rules
+                            a(href="#").link Members
+                            a(href="#").link Join
+                  .page-content.tab(id="club-management")
+                    .content-block
+                      form.list-block
+                        ul
+                          li
+                            .item-content
+                              .item-inner
+                                .item-title.label Name
+                                .item-input
+                                  input(type='text', placeholder='Club Name' value='Samba Lads')
+                          li.align-top
+                            .item-content
+                              .item-inner
+                                .item-title.label Rules
+                                .item-input
+                                  textarea(placeholder='Club Rules') No divers, moaners or flakes.
+                          li.align-top
+                            .item-content
+                              .item-inner
+                                .item-title.label City
+                                .item-input
+                                  select
+                                    option Please Select
+                                    option Abu Dhabi
+                                    option Ajman
+                                    option(selected="selected") Dubai
+                                    option Fujairah
+                                    option Sharjah
+                                    option Ras Al Khaimah
+                                    option Umm Al Quwain
+                          li
+                            .item-content
+                              .item-inner
+                                .item-title.label Area
+                                .item-input
+                                  select
+                                    option Please Select
+                                    option Al Barsha
+                                    option Down Town
+                                    option Dubai Marina
+                                    option(selected="selected") Media City
+                                    option Sports City
+                          li.align-top
+                            .item-content
+                              .item-inner
+                                .item-title.label Club Crest
+                                a(href="#", data-popover=".popover-menu").open-popover.text-center
+                                  img(src="https://www.kingfootballtips.com/wp-content/uploads/2016/03/brazilian-betting-tips-1000x700.png", width="100%")
+                                  span Change Club Crest
+                      .content-block-title Pitches
+                      .list-block.media-list
+                        ul
+                          li
+                            a(href="#").item-link
+                              .item-content
+                                .item-media
+                                  img(src="https://maps.googleapis.com/maps/api/staticmap?center=25.041390,55.219570&zoom=11&size=80x80&maptype=roadmap&markers=color:red%7C25.041390,%2055.219570&key=AIzaSyBNT33a64DANR1ZSpmxcOU-77nK0xLb2j8" width="80")
+                                .item-inner
+                                  .item-title-row
+                                    .item-title Sports City
+                                  .item-text Turn right At the second exit. Next to Carrefour.
+                      .list-block.inset
+                        ul
+                          li
+                            a(href="#").list-button.item-link Add New Pitch
+      #view-3.view.tab
+        .pages.navbar-fixed
+          .page(data-page='index-3')
+            .navbar
+              .navbar-inner
+                .center Notifications
+            //form.searchbar
+            //  .searchbar-input
+            //    input(type='search', placeholder='Search')
+            //    a.searchbar-clear(href='#')
+            //  a.searchbar-cancel(href='#') Cancel
+              // Search Bar overlay
+            .page-content.user-notifications
+              //.content-block-title Notifications
+              .list-block.media-list
+                ul
+                  li.swipeout
+                    .swipeout-content
+                      a(href="#").item-link.item-content
+                        .item-inner.match-item
+                          .item-text <strong>You</strong> were accepted to the match is at <strong>Sport's City</strong> on <strong>Mon 21, Jan 2016</strong> at <strong>20:30</strong>.
+                          .item-after 2 hours ago
+                    .swipeout-actions-right
+                      a(href="#").demo-actions More
+                      a(href="#", data-confirm="Are you sure you want to delete this item?").swipeout-delete.swipeout-overswipe Clear
+                  li.swipeout
+                    .swipeout-content
+                      a(href="#").item-link.item-content
+                        .item-inner.club-item
+                          .item-text <strong>You</strong> founded the club <strong>Media City Moguls</strong>.
+                          .item-after Thurs 2/5 at 14:14
+                    .swipeout-actions-right
+                      a(href="#").demo-actions More
+                      a(href="#", data-confirm="Are you sure you want to delete this item?").swipeout-delete.swipeout-overswipe Clear
+      #view-4.view.tab
+        // We can make with view with navigation, let's add Top Navbar
+        .navbar
+          .navbar-inner
+            // Search Bar
+            //form.searchbar
+            //  .searchbar-input
+            //    input(type='search', placeholder='Search')
+            //    a.searchbar-clear(href='#')
+            //  a.searchbar-cancel(href='#') Cancel
+            //  // Search Bar overlay
+            .subnavbar.sliding
+              .buttons-row
+                a(href="#myprofile").button.tab-link.active You
+                a(href="#mystats").button.tab-link Stats
+                a(href="#mysettings").button.tab-link Settings
+        .pages.navbar-through
+          .page(data-page='index-4')
+
+
+            // Scrollable page content
+            .page-content
+              //.with-subnavbar
+              .tabs-animated-wrap
+                .tabs
+                  .page-content.tab(id="myprofile").active
+                    .row.profile
+                      .col-30.profile-image-container
+                        .profile-image
+                          img(src="http://lorempixel.com/100/100/people/8/" alt="my profile picture")
+                      .col-70
+                        h2 Mohamed Jama
+                        .row.no-gutter.m-b-4
+                          .col-40
+                            span Position:
+                          .col-60
+                            p Right Back
+                        .row.no-gutter
+                          .col-40
+                            span Joined:
+                          .col-60
+                            p 01/03/2016
+                    .content-block-title Invite Friends
+                    form.list-block.inputs-list
+                      ul
+                        li
+                          .item-content
+                            .item-inner
+                              .item-input
+                                input(type="text", placeholder="Name")
+                        li
+                          .item-content
+                            .item-inner
+                              .item-input
+                                input(type="email", placeholder="E-mail")
+                        li
+                          .item-content
+                            .item-inner
+                              .button-container
+                                a(href="#").button.button-big.color-green Send
+                    .button-section
+                      .buttons-row
+                        a(href="#").button Help
+                        a(href="#").button FAQ
+                      .buttons-row
+                        a(href="#").button Terms
+                        a(href="#").button Privacy
+                        a(href="#").button Contact
+
+                  .page-content.tab(id="mystats")
+                    .content-block-title Your Stats
+                    .content-section
+                      ol
+                        li You played most games for this club <strong>F.C Unicorns - 38</strong> games.
+                        li Overall you played <strong>71</strong> matches.
+                        li You have won <strong>48</strong> games, drawn <strong>12</strong>, lost <strong>11</strong>, giving you an impressive win percentage of <strong>68%</strong>.
+                        li You have scored <strong>27</strong> goals.
+                        li You have assisted <strong>7</strong> goals.
+                      .stat-card.row.no-gutter
+                        .col-30
+                          .profile-image
+                            img(src="http://lorempixel.com/100/100/people/8/" alt="my profile picture")
+                        .col-30
+                          .content
+                            h1 6.7
+                            span player rating
+                        .col-20
+                          .content
+                            p W: 48
+                            p D: 12
+                        .col-20
+                          .content
+                            p L: 11
+                            p D: 71
+                  .page-content.tab(id="mysettings")
+                    .content-block
+                      form.list-block
+                        ul
+                          li
+                            .item-content
+                              .item-inner
+                                .item-title.label Email
+                                .item-input
+                                  input(type='email', readonly, placeholder='Nick Name' value='dsad@asd.ads')
+                          li
+                            .item-content
+                              .item-inner
+                                .item-title.label NickName
+                                .item-input
+                                  input(type='text', placeholder='Nick Name' value='Dazzz')
+                          li.align-top
+                            .item-content
+                              .item-inner
+                                .item-title.label Position
+                                .item-input
+                                  select
+                                    option Please Select
+                                    option Goalie
+                                    option Defender
+                                    option(selected="selected") Right Back
+                                    option Left Back
+                                    option Center Mid
+                                    option Wing Wizard
+                                    option Forward
+                                    option Striker
+                          li.align-top
+                            .item-content
+                              .item-inner
+                                .item-title.label DOB
+                                .item-input
+                                  input(type="text", placeholder="DOB", readonly="readonly")#ks-picker-date
+                                  #ks-picker-date-container
+                          li.align-top
+                            .item-content
+                              .item-inner
+                                .item-title.label Profile Pic
+                                a(href="#", data-popover=".popover-menu").open-popover.text-center.m-auto
+                                  .profile-image
+                                    img(src="http://lorempixel.com/100/100/people/8/", width="100%")
+                                  span Change Profile Pic
+                          li
+                            .item-content
+                              .item-inner
+                                .item-title.label Phone
+                                .item-input
+                                  input(type='tel', placeholder='Phone No' value='0529643671')
+                          li.align-top
+                            .item-content
+                              .item-inner
+                                .item-title.label Gender
+                                .item-input
+                                  select
+                                    option Please Select
+                                    option(selected="selected") Man
+                                    option Woman
+                      .list-block.inset
+                        ul
+                          li
+                            a(href="#").list-button.item-link Change Password
+      // Bottom Tabbar
+      .toolbar.tabbar.tabbar-labels
+        .toolbar-inner
+          a.tab-link.active(href='#view-1')
+            i.icon.tabbar-demo-icon-1
+            span.tabbar-label Matches
+          a.tab-link(href='#view-2')
+            i.icon.tabbar-demo-icon-2
+            span.tabbar-label Clubs
+          a.tab-link(href='#view-3')
+            i.icon.tabbar-demo-icon-3
+              span.badge.bg-red 2
+            span.tabbar-label Notifications
+          a.tab-link(href='#view-4')
+            i.icon.tabbar-demo-icon-4
+            span.tabbar-label Profile
+    // Path to Framework7 Library JS
+    script#fixture-template(type="text/template7")
+        .card.match-card
+          .card-content.row.no-gutter
+            .card-content-inner.col-70
+              .row.no-gutter
+                .col-35
+                  span K.O.:
+                .col-65
+                  p {{date}}
+              .row.no-gutter
+                .col-35
+                  span Pitch:
+                .col-65
+                  p
+                    a(href="#") {{pitchname}}
+              .row.no-gutter
+                .col-35
+                  span Players:
+                .col-65
+                  p {{players}}/{{capacity}}
+              .row.no-gutter
+                .col-35
+                  span Club:
+                .col-65
+                  p {{club}}
+              .row.no-gutter
+                .col-35
+                  span Cost:
+                .col-65
+                  p {{cost}}
+            .col-30.bg-blue
+              a(href="#").link
+                span Edit
+    script(type="text/javascript", src="js/#{scriptFilename}.js")
+    // Path to your app js
+    script(type="text/javascript", src="js/my-app.js")

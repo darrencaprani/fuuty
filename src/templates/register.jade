@@ -1,0 +1,53 @@
+.navbar
+    .navbar-inner
+        .left.sliding Register
+.pages.navbar-through
+    .page(data-page="register")
+        .page-content.login-screen-content
+            form.bottom
+                .list-block
+                    ul
+                        li.item-content
+                            .item-inner
+                                .item-input
+                                    label.info (username)
+                                    input(type="email", id="email", name="email", placeholder="Email")
+                        li.item-content
+                            .item-inner
+                                .item-input
+                                    input(type="password", id="password", name="password", placeholder="Password")
+                        li.item-content
+                            .item-inner
+                                .item-input
+                                    input(type="password", id="confirmpassword", name="confirmpassword", placeholder="Confirm Password")
+                .hero-buttons.normal-buttons
+                    .list-block.inset
+                        ul
+                            li
+                                a(href="#").list-button.item-link#register
+                                    span CREATE PROFILE
+                    .list-block.inset
+                        ul
+                            li
+                                a(href="index.html").list-button.item-link.back
+                                    span Back
+            //form
+            //    .list-block
+            //        ul
+            //            li.item-content
+            //                .item-inner
+            //                    .item-title.label Email
+            //                    .item-input
+            //                        input(type="email", id="email", name="email", placeholder="Email")
+            //            li.item-content
+            //                .item-inner
+            //                    .item-title.label Password
+            //                    .item-input
+            //                        input(type="password", id="password", name="password", placeholder="Password")
+            //            li.item-content
+            //                .item-inner
+            //                    .item-title.label Confirm Password
+            //                    .item-input
+            //                        input(type="password", id="confirmpassword", name="confirmpassword", placeholder="Confirm Password")
+            //.content-block
+            //    a(href="#").button.item-link.color-blue#register Create Profile

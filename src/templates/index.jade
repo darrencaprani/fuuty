@@ -1,0 +1,40 @@
+doctype
+html
+  head
+    meta(charset="utf-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui")
+    meta(name='apple-mobile-web-app-capable', content='yes')
+    meta(name="apple-mobile-web-app-status-bar-style", content="black")
+    title My App
+    // Path to Framework7 Library CSS
+    link(rel="stylesheet", href="css/#{stylesheetFilename}.css")
+    link(rel="stylesheet", href="css/#{stylesheetColorsFilename}.css")
+    link(rel="stylesheet", href="css/framework7-icons.css")
+    // Path to your custom app styles
+    link(rel="stylesheet", href="css/my-app.css")
+  body
+    .views
+      .view.view-main
+        .navbar
+          .navbar-inner.no-after
+        .pages.navbar-through
+            .page(data-page='index')
+              .page-content
+                .hero-image
+                  img(src="/build/img/fuuty.png")
+                .hero-buttons
+                  .list-block.inset
+                    ul
+                      li
+                        a(href="login.html").list-button.item-link
+                          span Login
+                  .list-block.inset
+                    ul
+                      li
+                        a(href="register.html").list-button.item-link
+                          span Register
+      .toolbar
+        .toolbar-inner
+    script(type="text/javascript", src="js/#{scriptFilename}.js")
+    // Path to your app js
+    script(type="text/javascript", src="js/my-app.js")

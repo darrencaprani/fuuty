@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>My App</title>
+    <!-- Path to Framework7 Library CSS-->
+    <link rel="stylesheet" href="css/framework7.ios.css">
+    <link rel="stylesheet" href="css/framework7.ios.colors.css">
+    <link rel="stylesheet" href="css/framework7-icons.css">
+    <!-- Path to your custom app styles-->
+    <link rel="stylesheet" href="css/my-app.css">
+  </head>
+  <body>
+    <!-- Status bar overlay for fullscreen mode-->
+    <div class="statusbar-overlay"></div>
+    <!-- Panels overlay-->
+    <div class="panel-overlay"></div>
+    <!-- We need to set "toolbar-through" class on it to keep space for our tab bar-->
+    <div class="popover popover-menu">
+      <div class="popover-angle"></div>
+      <div class="popover-inner">
+        <div class="list-block">
+          <ul>
+            <li><a href="#" class="list-button item-link">Choose from Library</a></li>
+            <li><a href="#" class="list-button item-link">Take Photo</a></li>
+            <li><a href="#" class="list-button item-link color-red">Remove Current Photo</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="popover popover-music"></div>
+    <div class="views tabs toolbar-through">
+      <!-- Your first view, it is also a .tab and should have "active" class to make it visible by default-->
+      <div id="view-1" class="view view-main tab active">
+        <!-- We can make with view with navigation, let's add Top Navbar-->
+        <div class="navbar">
+          <div class="navbar-inner">
+            <!-- Search Bar-->
+            <!--form.searchbar.searchbar-init(data-search-list=".search-here", data-search-in=".item-title")-->
+            <!-- .searchbar-input-->
+            <!--   input(type='search', placeholder='Search')-->
+            <!--   a.searchbar-clear(href='#')-->
+            <!-- a.searchbar-cancel(href='#') Cancel-->
+            <!-- // Search Bar overlay-->
+            <div class="subnavbar sliding no-p">
+              <div class="buttons-row"><a href="#fixtures" class="button tab-link active">Fixtures</a><a href="#matches" class="button tab-link">Matches</a><a href="#match-history" class="button tab-link">History</a></div>
+            </div>
+          </div>
+        </div>
+        <div class="pages navbar-through">
+          <div data-page="index1" class="page">
+            <!--.searchbar-overlay-->
+            <!-- Scrollable page content-->
+            <div class="page-content">
+              <!--.with-subnavbar-->
+              <div class="tabs-animated-wrap">
+                <div class="tabs">
+                  <div id="fixtures" class="page-content tab active matches">
+                    <div class="content-block">
+                      <div id="fixturesLoader" class="text-center">
+                        <div class="preloader preloader-blue"></div>
+                      </div>
+                      <!--.content-block-title Media City Magic-->
+                      <!--.card.match-card-->
+                      <!--  .card-content.row.no-gutter-->
+                      <!--    .card-content-inner.col-70-->
+                      <!--      .row.no-gutter-->
+                      <!--        .col-35-->
+                      <!--          span K.O.:-->
+                      <!--        .col-65-->
+                      <!--          p 22/10/17 20:30-->
+                      <!--      .row.no-gutter-->
+                      <!--        .col-35-->
+                      <!--          span Pitch:-->
+                      <!--        .col-65-->
+                      <!--          p-->
+                      <!--            a(href="#") Media City, Dubai-->
+                      <!--      .row.no-gutter-->
+                      <!--        .col-35-->
+                      <!--          span Players:-->
+                      <!--        .col-65-->
+                      <!--          p 20/20-->
+                      <!--      .row.no-gutter-->
+                      <!--        .col-35-->
+                      <!--          span Club:-->
+                      <!--        .col-65-->
+                      <!--          p Dubai Colts-->
+                      <!--      .row.no-gutter-->
+                      <!--        .col-35-->
+                      <!--          span Cost:-->
+                      <!--        .col-65-->
+                      <!--          p 40aed-->
+                      <!--    .col-30.bg-red-->
+                      <!--      a(href="#").link.demo-confirm-->
+                      <!--        span Leave-->
+                    </div><a href="#" class="floating-button color-blue"><i class="icon f7-icons">add</i></a>
+                  </div>
+                  <div id="matches" class="page-content tab">
+                    <div class="content-block">
+                      <div class="content-block-title">Dubai Cobras</div>
+                      <div class="card match-card">
+                        <div class="card-content row no-gutter">
+                          <div class="card-content-inner col-70">
+                            <div class="row no-gutter">
+                              <div class="col-35"><span>K.O.:</span></div>
+                              <div class="col-65">
+                                <p>22/10/17 20:30</p>
+                              </div>
+                            </div>
+                            <div class="row no-gutter">
+                              <div class="col-35"><span>Pitch:</span></div>
+                              <div class="col-65">
+                                <p><a href="#">Media City, Dubai</a></p>
+                              </div>
+                            </div>
+                            <div class="row no-gutter">
+                              <div class="col-35"><span>Players:</span></div>
+                              <div class="col-65">
+                                <p>20/20</p>
+                              </div>
+                            </div>
+                            <div class="row no-gutter">
+                              <div class="col-35"><span>Club:</span></div>
+                              <div class="col-65">
+                                <p>Dubai Colts</p>
+                              </div>
+                            </div>
+                            <div class="row no-gutter">
+                              <div class="col-35"><span>Cost:</span></div>
+                              <div class="col-65">
+                                <p>40aed</p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-30 bg-green"><a href="#" class="link"><span>Join</span></a></div>
+                        </div>
+                      </div>
+                      <div class="content-block-title">Media City Magic</div>
+                      <div class="card match-card">
+                        <div class="card-content row no-gutter">
+                          <div class="card-content-inner col-70">
+                            <div class="row no-gutter">
+                              <div class="col-35"><span>K.O.:</span></div>
+                              <div class="col-65">
+                                <p>22/10/17 20:30</p>
+                              </div>
+                            </div>
+                            <div class="row no-gutter">
+                              <div class="col-35"><span>Pitch:</span></div>
+                              <div class="col-65">
+                                <p><a href="#">Media City, Dubai</a></p>
+                              </div>
+                            </div>
+                            <div class="row no-gutter">
+                              <div class="col-35"><span>Players:</span></div>
+                              <div class="col-65">
+                                <p>20/20</p>
+                              </div>
+                            </div>
+                            <div class="row no-gutter">
+                              <div class="col-35"><span>Club:</span></div>
+                              <div class="col-65">
+                                <p>Dubai Colts</p>
+                              </div>
+                            </div>
+                            <div class="row no-gutter">
+                              <div class="col-35"><span>Cost:</span></div>
+                              <div class="col-65">
+                                <p>40aed</p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-30 bg-green"><a href="#" class="link demo-confirm"><span>Join</span></a></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div id="match-history" class="page-content tab">
+                    <div class="content-block">
+                      <div class="content-block"></div>
+                      <div class="content-block-title">Dubai Cobras</div>
+                      <div class="card match-card">
+                        <div class="card-content row no-gutter">
+                          <div class="card-content-inner col-70">
+                            <div class="row no-gutter">
+                              <div class="col-35"><span>K.O.:</span></div>
+                              <div class="col-65">
+                                <p>22/10/17 20:30</p>
+                              </div>
+                            </div>
+                            <div class="row no-gutter">
+                              <div class="col-35"><span>Pitch:</span></div>
+                              <div class="col-65">
+                                <p><a href="#">Media City, Dubai</a></p>
+                              </div>
+                            </div>
+                            <div class="row no-gutter">
+                              <div class="col-35"><span>Players:</span></div>
+                              <div class="col-65">
+                                <p>20/20</p>
+                              </div>
+                            </div>
+                            <div class="row no-gutter">
+                              <div class="col-35"><span>Club:</span></div>
+                              <div class="col-65">
+                                <p>Dubai Colts</p>
+                              </div>
+                            </div>
+                            <div class="row no-gutter">
+                              <div class="col-35"><span>Cost:</span></div>
+                              <div class="col-65">
+                                <p>40aed</p>
+                              </div>
+                            </div>
+                            <div class="row"><a class="button">View Match Stats</a></div>
+                          </div>
+                          <div class="col-30 bg-green">
+                            <div class="link">
+                              <div class="result">
+                                <h2>4:0</h2><span>Win</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="card match-card">
+                        <div class="card-content row no-gutter">
+                          <div class="card-content-inner col-70">
+                            <div class="row no-gutter">
+                              <div class="col-35"><span>K.O.:</span></div>
+                              <div class="col-65">
+                                <p>22/10/17 20:30</p>
+                              </div>
+                            </div>
+                            <div class="row no-gutter">
+                              <div class="col-35"><span>Pitch:</span></div>
+                              <div class="col-65">
+                                <p><a href="#">Media City, Dubai</a></p>
+                              </div>
+                            </div>
+                            <div class="row no-gutter">
+                              <div class="col-35"><span>Players:</span></div>
+                              <div class="col-65">
+                                <p>20/20</p>
+                              </div>
+                            </div>
+                            <div class="row no-gutter">
+                              <div class="col-35"><span>Club:</span></div>
+                              <div class="col-65">
+                                <p>Dubai Colts</p>
+                              </div>
+                            </div>
+                            <div class="row no-gutter">
+                              <div class="col-35"><span>Cost:</span></div>
+                              <div class="col-65">
+                                <p>40aed</p>
+                              </div>
+                            </div>
+                            <div class="row"><a class="button">View Match Stats</a></div>
+                          </div>
+                          <div class="col-30 bg-yellow">
+                            <div class="link">
+                              <div class="result">
+                                <h2>6:6</h2><span>Draw</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="card match-card">
+                        <div class="card-content row no-gutter">
+                          <div class="card-content-inner col-70">
+                            <div class="row no-gutter">
+                              <div class="col-35"><span>K.O.:</span></div>
+                              <div class="col-65">
+                                <p>22/10/17 20:30</p>
+                              </div>
+                            </div>
+                            <div class="row no-gutter">
+                              <div class="col-35"><span>Pitch:</span></div>
+                              <div class="col-65">
+                                <p><a href="#">Media City, Dubai</a></p>
+                              </div>
+                            </div>
+                            <div class="row no-gutter">
+                              <div class="col-35"><span>Players:</span></div>
+                              <div class="col-65">
+                                <p>20/20</p>
+                              </div>
+                            </div>
+                            <div class="row no-gutter">
+                              <div class="col-35"><span>Club:</span></div>
+                              <div class="col-65">
+                                <p>Dubai Colts</p>
+                              </div>
+                            </div>
+                            <div class="row no-gutter">
+                              <div class="col-35"><span>Cost:</span></div>
+                              <div class="col-65">
+                                <p>40aed</p>
+                              </div>
+                            </div>
+                            <div class="row"><a class="button">View Match Stats</a></div>
+                          </div>
+                          <div class="col-30 bg-red">
+                            <div class="link">
+                              <div class="result">
+                                <h2>0:2</h2><span>Loss</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Second view (for second wrap)-->
+      <div id="view-2" class="view tab">
+        <!-- We can make with view with navigation, let's add Top Navbar-->
+        <div class="navbar">
+          <div class="navbar-inner">
+            <!-- Search Bar-->
+            <!--form.searchbar-->
+            <!--  .searchbar-input-->
+            <!--    input(type='search', placeholder='Search')-->
+            <!--    a.searchbar-clear(href='#')-->
+            <!--  a.searchbar-cancel(href='#') Cancel-->
+            <!--  // Search Bar overlay-->
+            <div class="subnavbar sliding">
+              <div class="buttons-row"><a href="#myclubs" class="button tab-link active">My Clubs</a><a href="#findAClub" class="button tab-link">Find a Club</a><a href="#club-management" class="button tab-link">Club Mgmt</a></div>
+            </div>
+          </div>
+        </div>
+        <div class="pages navbar-through">
+          <div data-page="index-2" class="page">
+            <!-- Scrollable page content-->
+            <div class="page-content">
+              <!--.with-subnavbar-->
+              <div class="tabs-animated-wrap">
+                <div class="tabs">
+                  <div id="myclubs" class="page-content tab active">
+                    <div class="small-buttons">
+                      <div class="buttons-row"><a href="#" class="button active detail-list detail"><i class="f7-icons">data</i></a><a href="#" class="button detail-list list"><i class="f7-icons">list</i></a></div>
+                    </div>
+                    <div class="content-block">
+                      <div class="content-block-title">My Club</div>
+                      <div class="card club-card">
+                        <div class="card-content"><img src="https://www.kingfootballtips.com/wp-content/uploads/2016/03/brazilian-betting-tips-1000x700.png" width="100%">
+                          <div class="card-content-inner">
+                            <h2>Samba Lads</h2>
+                            <p>19 Members</p>
+                            <p>Media City, Dubai</p>
+                          </div>
+                        </div>
+                        <div class="card-footer"><a href="#" class="link">Rules</a><a href="#" class="link">Members</a><a href="#" class="link">Edit</a></div>
+                      </div>
+                      <div class="content-block-title">Clubs I am a member of</div>
+                      <div class="card club-card">
+                        <div class="card-content"><img src="http://ladycoyotesoccer.com/images/logo/wfhslcs_logo-icon.png" width="100%">
+                          <div class="card-content-inner">
+                            <h2>Dubai Wolves</h2>
+                            <p>6 Members</p>
+                            <p>Sports City, Dubai</p>
+                          </div>
+                          <div class="card-footer"><a href="#" class="link">Rules</a><a href="#" class="link">Members</a><a href="#" class="link">Leave</a></div>
+                        </div>
+                      </div>
+                      <div class="card club-card">
+                        <div class="card-content"><img src="http://fanaticsinc.com/wp-content/uploads/Real-Madrid-C.F.-e1460472168914.jpg" width="100%">
+                          <div class="card-content-inner">
+                            <h2>Dubai Galacticos</h2>
+                            <p>336 Members</p>
+                            <p>Sports City, Dubai</p>
+                          </div>
+                          <div class="card-footer"><a href="#" class="link">Rules</a><a href="#" class="link">Members</a><a href="#" class="link">Leave</a></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div id="findAClub" class="page-content tab">
+                    <div class="small-buttons">
+                      <div class="buttons-row"><a href="#" class="button active detail-list detail"><i class="f7-icons">data</i></a><a href="#" class="button detail-list list"><i class="f7-icons">list</i></a></div>
+                    </div>
+                    <div class="content-block">
+                      <div class="content-block-title">Clubs Near Me</div>
+                      <div class="card club-card">
+                        <div class="card-content"><img src="https://upload.wikimedia.org/wikipedia/en/8/87/FAI.png" width="100%">
+                          <div class="card-content-inner">
+                            <h2>Dubai Irish</h2>
+                            <p>16 Members</p>
+                            <p>Downtown, Dubai</p>
+                          </div>
+                          <div class="card-footer"><a href="#" class="link">Rules</a><a href="#" class="link">Members</a><a href="#" class="link">Join</a></div>
+                        </div>
+                      </div>
+                      <div class="card club-card">
+                        <div class="card-content"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/f/fb/Shamrock_Rovers_FC_logo.svg/1166px-Shamrock_Rovers_FC_logo.svg.png" width="100%">
+                          <div class="card-content-inner">
+                            <h2>Al Barsha Rovers</h2>
+                            <p>31 Members</p>
+                            <p>Sports City, Dubai</p>
+                          </div>
+                          <div class="card-footer"><a href="#" class="link">Rules</a><a href="#" class="link">Members</a><a href="#" class="link">Join</a></div>
+                        </div>
+                      </div>
+                      <div class="card club-card">
+                        <div class="card-content"><img src="http://inicewallpapers.com/wp-content/uploads/2016/06/arsenal-soccer-logo.jpg" width="100%">
+                          <div class="card-content-inner">
+                            <h2>Mirdif Gooners</h2>
+                            <p>310 Members</p>
+                            <p>Mirdif, Dubai</p>
+                          </div>
+                          <div class="card-footer"><a href="#" class="link">Rules</a><a href="#" class="link">Members</a><a href="#" class="link">Join</a></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div id="club-management" class="page-content tab">
+                    <div class="content-block">
+                      <form class="list-block">
+                        <ul>
+                          <li>
+                            <div class="item-content">
+                              <div class="item-inner">
+                                <div class="item-title label">Name</div>
+                                <div class="item-input">
+                                  <input type="text" placeholder="Club Name" value="Samba Lads">
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+                          <li class="align-top">
+                            <div class="item-content">
+                              <div class="item-inner">
+                                <div class="item-title label">Rules</div>
+                                <div class="item-input">
+                                  <textarea placeholder="Club Rules">No divers, moaners or flakes.</textarea>
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+                          <li class="align-top">
+                            <div class="item-content">
+                              <div class="item-inner">
+                                <div class="item-title label">City</div>
+                                <div class="item-input">
+                                  <select>
+                                    <option>Please Select</option>
+                                    <option>Abu Dhabi</option>
+                                    <option>Ajman</option>
+                                    <option selected="selected">Dubai</option>
+                                    <option>Fujairah</option>
+                                    <option>Sharjah</option>
+                                    <option>Ras Al Khaimah</option>
+                                    <option>Umm Al Quwain</option>
+                                  </select>
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="item-content">
+                              <div class="item-inner">
+                                <div class="item-title label">Area</div>
+                                <div class="item-input">
+                                  <select>
+                                    <option>Please Select</option>
+                                    <option>Al Barsha</option>
+                                    <option>Down Town</option>
+                                    <option>Dubai Marina</option>
+                                    <option selected="selected">Media City</option>
+                                    <option>Sports City</option>
+                                  </select>
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+                          <li class="align-top">
+                            <div class="item-content">
+                              <div class="item-inner">
+                                <div class="item-title label">Club Crest</div><a href="#" data-popover=".popover-menu" class="open-popover text-center"><img src="https://www.kingfootballtips.com/wp-content/uploads/2016/03/brazilian-betting-tips-1000x700.png" width="100%"><span>Change Club Crest</span></a>
+                              </div>
+                            </div>
+                          </li>
+                        </ul>
+                      </form>
+                      <div class="content-block-title">Pitches</div>
+                      <div class="list-block media-list">
+                        <ul>
+                          <li><a href="#" class="item-link">
+                              <div class="item-content">
+                                <div class="item-media"><img src="https://maps.googleapis.com/maps/api/staticmap?center=25.041390,55.219570&amp;zoom=11&amp;size=80x80&amp;maptype=roadmap&amp;markers=color:red%7C25.041390,%2055.219570&amp;key=AIzaSyBNT33a64DANR1ZSpmxcOU-77nK0xLb2j8" width="80"></div>
+                                <div class="item-inner">
+                                  <div class="item-title-row">
+                                    <div class="item-title">Sports City</div>
+                                  </div>
+                                  <div class="item-text">Turn right At the second exit. Next to Carrefour.</div>
+                                </div>
+                              </div></a></li>
+                        </ul>
+                      </div>
+                      <div class="list-block inset">
+                        <ul>
+                          <li><a href="#" class="list-button item-link">Add New Pitch</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="view-3" class="view tab">
+        <div class="pages navbar-fixed">
+          <div data-page="index-3" class="page">
+            <div class="navbar">
+              <div class="navbar-inner">
+                <div class="center">Notifications</div>
+              </div>
+            </div>
+            <!--form.searchbar-->
+            <!--  .searchbar-input-->
+            <!--    input(type='search', placeholder='Search')-->
+            <!--    a.searchbar-clear(href='#')-->
+            <!--  a.searchbar-cancel(href='#') Cancel// Search Bar overlay
+            -->
+            <div class="page-content user-notifications">
+              <!--.content-block-title Notifications-->
+              <div class="list-block media-list">
+                <ul>
+                  <li class="swipeout">
+                    <div class="swipeout-content"><a href="#" class="item-link item-content">
+                        <div class="item-inner match-item">
+                          <div class="item-text"><strong>You</strong> were accepted to the match is at <strong>Sport's City</strong> on <strong>Mon 21, Jan 2016</strong> at <strong>20:30</strong>.</div>
+                          <div class="item-after">2 hours ago</div>
+                        </div></a></div>
+                    <div class="swipeout-actions-right"><a href="#" class="demo-actions">More</a><a href="#" data-confirm="Are you sure you want to delete this item?" class="swipeout-delete swipeout-overswipe">Clear</a></div>
+                  </li>
+                  <li class="swipeout">
+                    <div class="swipeout-content"><a href="#" class="item-link item-content">
+                        <div class="item-inner club-item">
+                          <div class="item-text"><strong>You</strong> founded the club <strong>Media City Moguls</strong>.</div>
+                          <div class="item-after">Thurs 2/5 at 14:14</div>
+                        </div></a></div>
+                    <div class="swipeout-actions-right"><a href="#" class="demo-actions">More</a><a href="#" data-confirm="Are you sure you want to delete this item?" class="swipeout-delete swipeout-overswipe">Clear</a></div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="view-4" class="view tab">
+        <!-- We can make with view with navigation, let's add Top Navbar-->
+        <div class="navbar">
+          <div class="navbar-inner">
+            <!-- Search Bar-->
+            <!--form.searchbar-->
+            <!--  .searchbar-input-->
+            <!--    input(type='search', placeholder='Search')-->
+            <!--    a.searchbar-clear(href='#')-->
+            <!--  a.searchbar-cancel(href='#') Cancel-->
+            <!--  // Search Bar overlay-->
+            <div class="subnavbar sliding">
+              <div class="buttons-row"><a href="#myprofile" class="button tab-link active">You</a><a href="#mystats" class="button tab-link">Stats</a><a href="#mysettings" class="button tab-link">Settings</a></div>
+            </div>
+          </div>
+        </div>
+        <div class="pages navbar-through">
+          <div data-page="index-4" class="page">
+            <!-- Scrollable page content-->
+            <div class="page-content">
+              <!--.with-subnavbar-->
+              <div class="tabs-animated-wrap">
+                <div class="tabs">
+                  <div id="myprofile" class="page-content tab active">
+                    <div class="row profile">
+                      <div class="col-30 profile-image-container">
+                        <div class="profile-image"><img src="http://lorempixel.com/100/100/people/8/" alt="my profile picture"></div>
+                      </div>
+                      <div class="col-70">
+                        <h2>Mohamed Jama</h2>
+                        <div class="row no-gutter m-b-4">
+                          <div class="col-40"><span>Position:</span></div>
+                          <div class="col-60">
+                            <p>Right Back</p>
+                          </div>
+                        </div>
+                        <div class="row no-gutter">
+                          <div class="col-40"><span>Joined:</span></div>
+                          <div class="col-60">
+                            <p>01/03/2016</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="content-block-title">Invite Friends</div>
+                    <form class="list-block inputs-list">
+                      <ul>
+                        <li>
+                          <div class="item-content">
+                            <div class="item-inner">
+                              <div class="item-input">
+                                <input type="text" placeholder="Name">
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="item-content">
+                            <div class="item-inner">
+                              <div class="item-input">
+                                <input type="email" placeholder="E-mail">
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="item-content">
+                            <div class="item-inner">
+                              <div class="button-container"><a href="#" class="button button-big color-green">Send</a></div>
+                            </div>
+                          </div>
+                        </li>
+                      </ul>
+                    </form>
+                    <div class="button-section">
+                      <div class="buttons-row"><a href="#" class="button">Help</a><a href="#" class="button">FAQ</a></div>
+                      <div class="buttons-row"><a href="#" class="button">Terms</a><a href="#" class="button">Privacy</a><a href="#" class="button">Contact</a></div>
+                    </div>
+                  </div>
+                  <div id="mystats" class="page-content tab">
+                    <div class="content-block-title">Your Stats</div>
+                    <div class="content-section">
+                      <ol>
+                        <li>You played most games for this club <strong>F.C Unicorns - 38</strong> games.</li>
+                        <li>Overall you played <strong>71</strong> matches.</li>
+                        <li>You have won <strong>48</strong> games, drawn <strong>12</strong>, lost <strong>11</strong>, giving you an impressive win percentage of <strong>68%</strong>.</li>
+                        <li>You have scored <strong>27</strong> goals.</li>
+                        <li>You have assisted <strong>7</strong> goals.</li>
+                      </ol>
+                      <div class="stat-card row no-gutter">
+                        <div class="col-30">
+                          <div class="profile-image"><img src="http://lorempixel.com/100/100/people/8/" alt="my profile picture"></div>
+                        </div>
+                        <div class="col-30">
+                          <div class="content">
+                            <h1>6.7</h1><span>player rating</span>
+                          </div>
+                        </div>
+                        <div class="col-20">
+                          <div class="content">
+                            <p>W: 48</p>
+                            <p>D: 12</p>
+                          </div>
+                        </div>
+                        <div class="col-20">
+                          <div class="content">
+                            <p>L: 11</p>
+                            <p>D: 71</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div id="mysettings" class="page-content tab">
+                    <div class="content-block">
+                      <form class="list-block">
+                        <ul>
+                          <li>
+                            <div class="item-content">
+                              <div class="item-inner">
+                                <div class="item-title label">Email</div>
+                                <div class="item-input">
+                                  <input type="email" readonly placeholder="Nick Name" value="dsad@asd.ads">
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="item-content">
+                              <div class="item-inner">
+                                <div class="item-title label">NickName</div>
+                                <div class="item-input">
+                                  <input type="text" placeholder="Nick Name" value="Dazzz">
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+                          <li class="align-top">
+                            <div class="item-content">
+                              <div class="item-inner">
+                                <div class="item-title label">Position</div>
+                                <div class="item-input">
+                                  <select>
+                                    <option>Please Select</option>
+                                    <option>Goalie</option>
+                                    <option>Defender</option>
+                                    <option selected="selected">Right Back</option>
+                                    <option>Left Back</option>
+                                    <option>Center Mid</option>
+                                    <option>Wing Wizard</option>
+                                    <option>Forward</option>
+                                    <option>Striker</option>
+                                  </select>
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+                          <li class="align-top">
+                            <div class="item-content">
+                              <div class="item-inner">
+                                <div class="item-title label">DOB</div>
+                                <div class="item-input">
+                                  <input type="text" placeholder="DOB" readonly="readonly" id="ks-picker-date">
+                                  <div id="ks-picker-date-container"></div>
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+                          <li class="align-top">
+                            <div class="item-content">
+                              <div class="item-inner">
+                                <div class="item-title label">Profile Pic</div><a href="#" data-popover=".popover-menu" class="open-popover text-center m-auto">
+                                  <div class="profile-image"><img src="http://lorempixel.com/100/100/people/8/" width="100%"></div><span>Change Profile Pic</span></a>
+                              </div>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="item-content">
+                              <div class="item-inner">
+                                <div class="item-title label">Phone</div>
+                                <div class="item-input">
+                                  <input type="tel" placeholder="Phone No" value="0529643671">
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+                          <li class="align-top">
+                            <div class="item-content">
+                              <div class="item-inner">
+                                <div class="item-title label">Gender</div>
+                                <div class="item-input">
+                                  <select>
+                                    <option>Please Select</option>
+                                    <option selected="selected">Man</option>
+                                    <option>Woman</option>
+                                  </select>
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+                        </ul>
+                      </form>
+                      <div class="list-block inset">
+                        <ul>
+                          <li><a href="#" class="list-button item-link">Change Password</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Bottom Tabbar-->
+      <div class="toolbar tabbar tabbar-labels">
+        <div class="toolbar-inner"><a href="#view-1" class="tab-link active"><i class="icon tabbar-demo-icon-1"></i><span class="tabbar-label">Matches</span></a><a href="#view-2" class="tab-link"><i class="icon tabbar-demo-icon-2"></i><span class="tabbar-label">Clubs</span></a><a href="#view-3" class="tab-link"><i class="icon tabbar-demo-icon-3"><span class="badge bg-red">2</span></i><span class="tabbar-label">Notifications</span></a><a href="#view-4" class="tab-link"><i class="icon tabbar-demo-icon-4"></i><span class="tabbar-label">Profile</span></a></div>
+      </div>
+    </div>
+    <!-- Path to Framework7 Library JS-->
+    <script id="fixture-template" type="text/template7">
+      <div class="card match-card">
+        <div class="card-content row no-gutter">
+          <div class="card-content-inner col-70">
+            <div class="row no-gutter">
+              <div class="col-35"><span>K.O.:</span></div>
+              <div class="col-65">
+                <p>{{date}}</p>
+              </div>
+            </div>
+            <div class="row no-gutter">
+              <div class="col-35"><span>Pitch:</span></div>
+              <div class="col-65">
+                <p><a href="#">{{pitchname}}</a></p>
+              </div>
+            </div>
+            <div class="row no-gutter">
+              <div class="col-35"><span>Players:</span></div>
+              <div class="col-65">
+                <p>{{players}}/{{capacity}}</p>
+              </div>
+            </div>
+            <div class="row no-gutter">
+              <div class="col-35"><span>Club:</span></div>
+              <div class="col-65">
+                <p>{{club}}</p>
+              </div>
+            </div>
+            <div class="row no-gutter">
+              <div class="col-35"><span>Cost:</span></div>
+              <div class="col-65">
+                <p>{{cost}}</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-30 bg-blue"><a href="#" class="link"><span>Edit</span></a></div>
+        </div>
+      </div>
+    </script>
+    <script type="text/javascript" src="js/framework7.js"></script>
+    <!-- Path to your app js-->
+    <script type="text/javascript" src="js/my-app.js"></script>
+  </body>
+</html>

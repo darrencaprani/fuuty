@@ -1,0 +1,289 @@
+.navbar
+    .navbar-inner
+        .left.sliding Profile
+.pages.navbar-through
+    .page(data-page="profile")
+        .page-content.login-screen-content
+            form(id="profile" method="post" enctype="multipart/form-data")
+                input(type="hidden" val="123" name="userid")#userid
+                .list-block
+                    ul
+                        li.align-top
+                            .item-content
+                                .item-inner
+                                    a(href="#", data-popover=".popover-menu").open-popover.text-center.m-auto.link-img
+                                        .profile-image
+                                            img(src="img/profile.png")#profile-image
+                                        span.icon-arrow-lowerright
+                                    input(name="profiler", type="file")#profiler
+                        li.item-content
+                            .item-inner
+                                .item-input
+                                    input(type="text", id="nickname", name="nickname", placeholder="Nickname")
+                        li.item-content
+                            .item-inner
+                                .item-input
+                                    input(type="tel", id="phone", name="phone", placeholder="Telephone nr")
+                        li.item-content
+                            .item-inner
+                                .row
+                                    .col-50
+                                        .item-input
+                                            select(id="position", name="position", placeholder="Position")
+                                                option Position
+                                                option Goalkeeper
+                                                option Defender
+                                                option Center Back
+                                                option Right Back
+                                                option Left Back
+                                                option Midfielder
+                                                option Center Mid
+                                                option Winger
+                                                option Forward
+                                                option Striker
+                                            span.icon-arrow-lowerright
+
+                                    .col-50
+                                        .item-input
+                                            select(id="gender", name="gender", placeholder="Gender")
+                                                option(selected="selected") Male
+                                                option Female
+                                            span.icon-arrow-lowerright
+                .list-block(style="margin:0")
+                    ul(style="border-top:none")
+                        li.accordion-item
+                            .item-content
+                                .item-inner
+                                    .row
+                                        .col-50
+                                            .item-input
+                                                select(id="nationality", name="nationality")
+                                                    option Nationality
+                                                    option Afghanistan
+                                                    option Albania
+                                                    option Algeria
+                                                    option American Samoa
+                                                    option Andorra
+                                                    option Angola
+                                                    option Anguilla
+                                                    option Antigua and Barbuda
+                                                    option Argentina
+                                                    option Armenia
+                                                    option Aruba
+                                                    option Australia
+                                                    option Austria
+                                                    option Azerbaijan
+                                                    option Bahamas
+                                                    option Bahrain
+                                                    option Bangladesh
+                                                    option Barbados
+                                                    option Belarus
+                                                    option Belgium
+                                                    option Belize
+                                                    option Benin
+                                                    option Bermuda
+                                                    option Bhutan
+                                                    option Bolivia
+                                                    option Bosnia and Herzegovina
+                                                    option Botswana
+                                                    option Brazil
+                                                    option British Virgin Islands
+                                                    option Brunei
+                                                    option Bulgaria
+                                                    option Burkina Faso
+                                                    option Burundi
+                                                    option Cambodia
+                                                    option Cameroon
+                                                    option Canada
+                                                    option Cape Verde
+                                                    option Cayman Islands
+                                                    option Central African Republic
+                                                    option Chad
+                                                    option Chile
+                                                    option China PR
+                                                    option Chinese Taipei
+                                                    option Colombia
+                                                    option Comoros
+                                                    option Congo
+                                                    option Cook Islands
+                                                    option Costa Rica
+                                                    option Croatia
+                                                    option Cuba
+                                                    option Curaçao
+                                                    option Cyprus
+                                                    option Czech Republic
+                                                    option    Country
+                                                    option Denmark
+                                                    option Djibouti
+                                                    option Dominica
+                                                    option Dominican Republic
+                                                    option DR Congo
+                                                    option Ecuador
+                                                    option Egypt
+                                                    option El Salvador
+                                                    option England
+                                                    option Equatorial Guinea
+                                                    option Eritrea
+                                                    option Estonia
+                                                    option Ethiopia
+                                                    option Faroe Islands
+                                                    option Fiji
+                                                    option Finland
+                                                    option France
+                                                    option Gabon
+                                                    option Gambia
+                                                    option Georgia
+                                                    option Germany
+                                                    option Ghana
+                                                    option Gibraltar
+                                                    option Greece
+                                                    option Grenada
+                                                    option Guam
+                                                    option Guatemala
+                                                    option Guinea
+                                                    option Guinea-Bissau
+                                                    option Guyana
+                                                    option Haiti
+                                                    option Honduras
+                                                    option Hong Kong
+                                                    option Hungary
+                                                    option Iceland
+                                                    option India
+                                                    option Indonesia
+                                                    option Iran
+                                                    option Iraq
+                                                    option Israel
+                                                    option Italy
+                                                    option Ivory Coast
+                                                    option Jamaica
+                                                    option Japan
+                                                    option Jordan
+                                                    option Kazakhstan
+                                                    option Kenya
+                                                    option Kosovo
+                                                    option Kuwait
+                                                    option Kyrgyzstan
+                                                    option Laos
+                                                    option Latvia
+                                                    option Lebanon
+                                                    option    Country
+                                                    option Lesotho
+                                                    option Liberia
+                                                    option Libya
+                                                    option Liechtenstein
+                                                    option Lithuania
+                                                    option Luxembourg
+                                                    option Macau
+                                                    option Macedonia
+                                                    option Madagascar
+                                                    option Malawi
+                                                    option Malaysia
+                                                    option Maldives
+                                                    option Mali
+                                                    option Malta
+                                                    option Mauritania
+                                                    option Mauritius
+                                                    option Mexico
+                                                    option Moldova
+                                                    option Mongolia
+                                                    option Montenegro
+                                                    option Montserrat
+                                                    option Morocco
+                                                    option Mozambique
+                                                    option Myanmar
+                                                    option Namibia
+                                                    option   Nepal
+                                                    option Netherlands
+                                                    option New Caledonia
+                                                    option New Zealand
+                                                    option Nicaragua
+                                                    option Niger
+                                                    option Nigeria
+                                                    option North Korea
+                                                    option Northern Ireland
+                                                    option Norway
+                                                    option Oman
+                                                    option Pakistan
+                                                    option Palestine
+                                                    option Panama
+                                                    option Papua New Guinea
+                                                    option Paraguay
+                                                    option Peru
+                                                    option Philippines
+                                                    option Poland
+                                                    option Portugal
+                                                    option Puerto Rico
+                                                    option Qatar
+                                                    option Republic of Ireland
+                                                    option Romania
+                                                    option Russia
+                                                    option Rwanda
+                                                    option Saint Kitts and Nevis
+                                                    option Saint Lucia
+                                                    option    Country
+                                                    option Saint Vincent and the Grenadines
+                                                    option Samoa
+                                                    option San Marino
+                                                    option São Tomé and Príncipe
+                                                    option Saudi Arabia
+                                                    option Scotland
+                                                    option Senegal
+                                                    option Serbia
+                                                    option Seychelles
+                                                    option Sierra Leone
+                                                    option Singapore
+                                                    option Slovakia
+                                                    option Slovenia
+                                                    option Solomon Islands
+                                                    option Somalia
+                                                    option South Africa
+                                                    option South Korea
+                                                    option South Sudan
+                                                    option Spain
+                                                    option Sri Lanka
+                                                    option Sudan
+                                                    option Suriname
+                                                    option Swaziland
+                                                    option Sweden
+                                                    option  Switzerland
+                                                    option Syria
+                                                    option Tahiti
+                                                    option Tajikistan
+                                                    option Tanzania
+                                                    option Thailand
+                                                    option Timor-Leste
+                                                    option Togo
+                                                    option Tonga
+                                                    option Trinidad and Tobago
+                                                    option Tunisia
+                                                    option Turkey
+                                                    option Turkmenistan
+                                                    option Turks and Caicos Islands
+                                                    option Uganda
+                                                    option Ukraine
+                                                    option United Arab Emirates
+                                                    option United States
+                                                    option Uruguay
+                                                    option U.S. Virgin Islands
+                                                    option Uzbekistan
+                                                    option Vanuatu
+                                                    option Venezuela
+                                                    option Vietnam
+                                                    option Wales
+                                                    option Yemen
+                                                    option Zambia
+                                                    option Zimbabwe
+                                                span.icon-arrow-lowerright
+                                        .col-50
+                                            .item-input.dob-datepicker
+                                                input(type="text", placeholder="DOB", readonly)#dob-picker-date.select.accordion-item-toggle
+                                                span.icon-arrow-lowerright
+                                                p.label DOB
+                            .accordion-item-content
+                                #dob-picker-date-container
+                .hero-buttons.normal-buttons
+                    .list-block.inset
+                        ul
+                            li
+                                a(href="#").list-button.item-link#createProfile
+                                    span Create!
